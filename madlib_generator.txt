@@ -1,0 +1,39 @@
+from tkinter import *
+root = Tk()
+
+#filling the blanks
+e1 = Entry(root, width= 50)
+e1.pack()
+e1.insert(0, 'Enter a greeting')
+
+e = Entry(root, width=50)
+e.pack()
+e.insert(0, 'Enter a name')
+
+e2 = Entry(root, width=50)
+e2.pack()
+e2.insert(0, 'Enter a verb')
+
+e3 = Entry(root, width=50)
+e3.pack()
+e3.insert(0, 'Enter a noun')
+
+e4 = Entry(root, width=50)
+e4.pack()
+e4.insert(0, 'Enter a word')
+
+#output after the button click
+def myclick():
+    lbl = Label(root, text= "Hello " + e.get() + ', Welcome to the Madlib Generator!')
+    lbl.pack()
+    lbl1 = Label(root, text= "Person 1: I am " + e.get() + "! How can I help you today?")
+    lbl1.pack()
+    lbl2= Label(root, text= "Person 2: Hi, I am " + e2.get() + " about " + e3.get() + ". I see " + e4.get() + " on my Blackboard.")
+    lbl2.pack()
+
+#enter button
+myButton = Button(root, text= "Enter", command= myclick)
+myButton.pack()
+
+#to keep the program running
+root.mainloop()
